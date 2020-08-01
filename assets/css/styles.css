@@ -548,7 +548,7 @@ img {
     border-radius: .5rem;
     border: 1.5px solid var(--first-color);
     outline: none;
-    margin-bottom: var(--mb-4);
+    margin-bottom: var(--mb-2);
     box-shadow: 10px 10px 5px #aaaaaa;
     font-family: var(--body-font);
 }

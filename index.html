@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="assets/js/spiketip.min.css">
     <!-- =====BOX ICONS===== -->
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-
     <title>Hachi Portfolio</title>
 </head>
+
 <body>
 <!--===== HEADER =====-->
 <header class="l-header">
@@ -235,17 +235,15 @@
 
             </div>
             <form action="/" class="contact__form" method="POST" data-netflify="true">
-                <input type="text" placeholder="Firstname" class="contact__input" name="firstname" required autofocus>
-                <input type="text" placeholder="Lastname" class="contact__input" name="lastname" required>
-                <input type="file" placeholder="Upload File" class="contact__input" name="file">
+                <input type="text" placeholder="Name" class="contact__input" name="firstname" required autofocus>
                 <input type="mail" placeholder="Email" class="contact__input" name="email" required>
+                <input type="file" placeholder="Upload File" class="contact__input" name="file">
                 <textarea
                         name="message"
                         placeholder="Message"
                         id="" cols="0" rows="10"
                         class="contact__input" required></textarea>
-                <input type="file" placeholder="Upload File" class="contact__input" name="file"
-                       data-netflify-recaptcha="true">
+                <div data-netflify-recaptcha="true"></div>
                 <input type="button" value="Submit" class="contact__button button"/>
             </form>
         </div>
