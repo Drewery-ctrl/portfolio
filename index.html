@@ -218,6 +218,7 @@
     <section class="contact section" id="contact">
         <h2 class="section-title">Contact Me</h2><br>
         <div class="contact_container">
+            <!--============== Contact Info Section =============-->
             <div class="contact__info">
                 <span>
                    <img src="assets/img/ideas.svg" alt="ideas" class="contact__img "/>
@@ -234,7 +235,7 @@
                 </div>
             </div>
             <!--============= Form Section ===================-->
-            <form id="contact__form" method="POST" class="contact__form" data-netflify="true" name="contact">
+            <form id="contact__form" method="POST" class="contact__form" name="contact" netflify>
                 <input type="text" placeholder="Name" class="contact__input" name="firstname" required>
                 <input type="mail" placeholder="Email" class="contact__input" name="email" required>
                 <input type="file" placeholder="Upload File" class="contact__input" name="file">
@@ -243,7 +244,7 @@
                         placeholder="Message"
                         id="" cols="0" rows="5"
                         class="contact__input" required></textarea>
-<!--                <div data-netflify-recaptcha="true" class="contact__input"></div>-->
+                <!-- <div data-netflify-recaptcha="true" class="contact__input"></div>-->
                 <button type="submit" class="contact__button button">Submit</button>
             </form>
         </div>
