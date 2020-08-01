@@ -548,7 +548,7 @@ img {
     border-radius: .5rem;
     border: 1.5px solid var(--first-color);
     outline: none;
-    margin-bottom: var(--mb-2);
+    margin-bottom: var(--mb-4);
     box-shadow: 10px 10px 5px #aaaaaa;
     font-family: var(--body-font);
 }
@@ -577,6 +577,18 @@ img {
 
 textarea {
     resize: none;
+}
+
+.text__success {
+    position: absolute;
+    text-align: center;
+    background-color: #44bd32;
+    color: #fff;
+    display: none;
+    bottom: -2764px;
+    padding: .75rem 2.5rem;
+    font-weight: var(--font-semi);
+    border-radius: .5rem;
 }
 
 .goto__top__btn {

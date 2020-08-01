@@ -1,3 +1,22 @@
+// Your web app's Firebase configuration
+let firebaseConfig = {
+    apiKey: "AIzaSyAztZScLs6oTL4ufRTCZvN5y-Z-rCVLAsU",
+    authDomain: "portfolio-675de.firebaseapp.com",
+    databaseURL: "https://portfolio-675de.firebaseio.com",
+    projectId: "portfolio-675de",
+    storageBucket: "portfolio-675de.appspot.com",
+    messagingSenderId: "669750499059",
+    appId: "1:669750499059:web:b1e7de1a3bd55debeec986",
+    measurementId: "G-3CYZDP6K61"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+firebase.analytics();
+
+// Reference messages collection
+let messagesRef = firebase.database().ref('messages');
+
+
 /*===== MENU SHOW =====*/
 const showMenu = (toggleId, navId) => {
     const toggle = document.getElementById(toggleId),
@@ -59,43 +78,44 @@ sr.reveal('.contact__input', { interval: 200 });
 
 
 // Handle form Submission
-// $(function() {
-//     $("#contact__form").submit(function(e) {
-//         e.preventDefault();
-//
-//         let $form = $(this);
-//         $.post($form.attr("action"), $form.serialize()).then(function() {
-//             console.log($form.serialize());
-//             alert("Thank you!");
-//         });
-//     });
-//
-//     console.log( "ready!" );
-// });
+$(function () {
+    $("#contact__form").submit(function (e) {
+        e.preventDefault();
 
-// $(function () {
-//     //hang on event of form with id=contact__form
-//     $("#contact__form").submit(function (e) {
-//
-//         //prevent Default functionality
-//         e.preventDefault();
-//
-//         //get the action-url of the form
-//         let action__url = e.currentTarget.action;
-//
-//         //do your own request an handle the results
-//         $.ajax({
-//             url: action__url,
-//             type: 'post',
-//             dataType: 'application/json',
-//             data: $("#contact__form").serialize(),
-//             success: function (data) {
-//                 console.log(data);
-//                 alert('Thank you.');
-//             },
-//             error: function(e){
-//                 // console.log(e);
-//             }
-//         });
-//     });
-// });
+        // Get Values
+        let name = getInputVal("name");
+        let email = getInputVal("email");
+        // let file = getInputVal("file");
+        let message = getInputVal("message");
+
+        let $form = $(this);
+        $.post($form.attr("action"), $form.serialize()).then(function () {
+            //save message to firebase
+            saveMessage(name, email, message);
+            //trigger form input reset
+            $("form").trigger("reset");
+            //show success notification
+            // $(".text__success").fadeIn().style.display = "block";
+            document.querySelector('.text__success').style.display = 'block';
+            //Hide notification after 3 seconds
+            setTimeout(() => {
+                // $(".text__success").fadeOut("slow").style.display = "none";
+                document.querySelector('.text__success').style.display = 'none';
+            }, 3000)
+            console.log(name, email, message);
+        });
+    });
+});
+
+// get Id values from DOM
+function getInputVal(id) {
+    return document.getElementById(id).value;
+}
+
+// Save message to firebase
+function saveMessage(name, email, message) {
+    let newMessageRef = messagesRef.push();
+    newMessageRef.set({ name: name, email: email, message: message });
+}
+
+
