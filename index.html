@@ -6,7 +6,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicon/site.webmanifest">
+<!--    <link rel="manifest" href="assets/favicon/site.webmanifest">-->
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/js/spiketip.min.css">
     <!-- =====BOX ICONS===== -->
@@ -232,9 +232,8 @@
                     <span class="circle one"></span>
                     <span class="circle two"></span>
                 </div>
-
             </div>
-            <form action="/" class="contact__form" method="POST" data-netflify="true">
+            <form id="contact__form" method="POST" class="contact__form" data-netflify="true">
                 <input type="text" placeholder="Name" class="contact__input" name="firstname" required autofocus>
                 <input type="mail" placeholder="Email" class="contact__input" name="email" required>
                 <input type="file" placeholder="Upload File" class="contact__input" name="file">
@@ -244,7 +243,7 @@
                         id="" cols="0" rows="10"
                         class="contact__input" required></textarea>
                 <div data-netflify-recaptcha="true"></div>
-                <input type="button" value="Submit" class="contact__button button"/>
+                <button type="submit" class="contact__button button">Submit</button>
             </form>
         </div>
     </section>

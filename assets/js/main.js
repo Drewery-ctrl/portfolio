@@ -58,5 +58,18 @@ sr.reveal('.work__img', { interval: 200 });
 sr.reveal('.contact__input', { interval: 200 });
 
 
+// Handle form Submission
+// $("#my-form").submit(function(e) {
+//     e.preventDefault();
+//
+//     var $form = $(this);
+//     $.post($form.attr("action"), $form.serialize()).then(function() {
+//         alert("Thank you!");
+//     });
+// });
 
-
+const myForm = document.getElementById("contact__form");
+myForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    console.log('form has been submitted');
+})
