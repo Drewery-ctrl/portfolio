@@ -233,16 +233,17 @@
                     <span class="circle two"></span>
                 </div>
             </div>
-            <form id="contact__form" method="POST" class="contact__form" data-netflify="true">
-                <input type="text" placeholder="Name" class="contact__input" name="firstname" required autofocus>
+            <!--============= Form Section ===================-->
+            <form id="contact__form" method="POST" class="contact__form" data-netflify="true" name="contact">
+                <input type="text" placeholder="Name" class="contact__input" name="firstname" required>
                 <input type="mail" placeholder="Email" class="contact__input" name="email" required>
                 <input type="file" placeholder="Upload File" class="contact__input" name="file">
                 <textarea
                         name="message"
                         placeholder="Message"
-                        id="" cols="0" rows="10"
+                        id="" cols="0" rows="5"
                         class="contact__input" required></textarea>
-                <div data-netflify-recaptcha="true"></div>
+<!--                <div data-netflify-recaptcha="true" class="contact__input"></div>-->
                 <button type="submit" class="contact__button button">Submit</button>
             </form>
         </div>

@@ -59,40 +59,43 @@ sr.reveal('.contact__input', { interval: 200 });
 
 
 // Handle form Submission
-$(function() {
-    $("#contact__form").submit(function(e) {
-        e.preventDefault();
-
-        let $form = $(this);
-        $.post($form.attr("action"), $form.serialize()).then(function() {
-            alert("Thank you!");
-        });
-    });
-
-    console.log( "ready!" );
-});
-
 // $(function() {
-//     //hang on event of form with id=myform
-//     $("#myform").submit(function(e) {
+//     $("#contact__form").submit(function(e) {
+//         e.preventDefault();
+//
+//         let $form = $(this);
+//         $.post($form.attr("action"), $form.serialize()).then(function() {
+//             console.log($form.serialize());
+//             alert("Thank you!");
+//         });
+//     });
+//
+//     console.log( "ready!" );
+// });
+
+// $(function () {
+//     //hang on event of form with id=contact__form
+//     $("#contact__form").submit(function (e) {
 //
 //         //prevent Default functionality
 //         e.preventDefault();
 //
 //         //get the action-url of the form
-//         var actionurl = e.currentTarget.action;
+//         let action__url = e.currentTarget.action;
 //
 //         //do your own request an handle the results
 //         $.ajax({
-//             url: actionurl,
+//             url: action__url,
 //             type: 'post',
 //             dataType: 'application/json',
-//             data: $("#myform").serialize(),
-//             success: function(data) {
-//             ... do something with the data...
+//             data: $("#contact__form").serialize(),
+//             success: function (data) {
+//                 console.log(data);
+//                 alert('Thank you.');
+//             },
+//             error: function(e){
+//                 // console.log(e);
 //             }
 //         });
-//
 //     });
-//
 // });

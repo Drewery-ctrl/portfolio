@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7cbdb841-4dcf-45a4-9e57-834966f46e6a" name="Default Changelist" comment="added submit handler">
+    <list default="true" id="7cbdb841-4dcf-45a4-9e57-834966f46e6a" name="Default Changelist" comment="fixed second submission ticket">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,7 +79,7 @@
       <workItem from="1596252828661" duration="2376000" />
       <workItem from="1596255232454" duration="4073000" />
       <workItem from="1596267117774" duration="854000" />
-      <workItem from="1596268137270" duration="5655000" />
+      <workItem from="1596268137270" duration="7982000" />
     </task>
     <task id="LOCAL-00001" summary="Updated form elements">
       <created>1596270033737</created>
@@ -107,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596273487755</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fixed second submission ticket">
+      <created>1596273830274</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1596273830274</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -134,7 +143,8 @@
     <MESSAGE value="fixed form submit bug" />
     <MESSAGE value="changed action='POST'" />
     <MESSAGE value="added submit handler" />
-    <option name="LAST_COMMIT_MESSAGE" value="added submit handler" />
+    <MESSAGE value="fixed second submission ticket" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed second submission ticket" />
   </component>
   <component name="WindowStateProjectService">
     <state x="606" y="245" key="#File_Watchers" timestamp="1596155074631">
@@ -157,10 +167,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="389" y="61" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1596273025374" />
-    <state x="362" y="142" key="Vcs.Push.Dialog.v2" timestamp="1596273494132">
+    <state x="362" y="142" key="Vcs.Push.Dialog.v2" timestamp="1596273836048">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="362" y="142" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1596273494132" />
+    <state x="362" y="142" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1596273836048" />
     <state x="426" y="188" key="run.anything.popup" timestamp="1596270336509">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
