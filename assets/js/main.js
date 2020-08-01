@@ -59,17 +59,40 @@ sr.reveal('.contact__input', { interval: 200 });
 
 
 // Handle form Submission
-// $("#my-form").submit(function(e) {
-//     e.preventDefault();
-//
-//     var $form = $(this);
-//     $.post($form.attr("action"), $form.serialize()).then(function() {
-//         alert("Thank you!");
-//     });
-// });
+$(function() {
+    $("#contact__form").submit(function(e) {
+        e.preventDefault();
 
-const myForm = document.getElementById("contact__form");
-myForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    console.log('form has been submitted');
-})
+        let $form = $(this);
+        $.post($form.attr("action"), $form.serialize()).then(function() {
+            alert("Thank you!");
+        });
+    });
+
+    console.log( "ready!" );
+});
+
+// $(function() {
+//     //hang on event of form with id=myform
+//     $("#myform").submit(function(e) {
+//
+//         //prevent Default functionality
+//         e.preventDefault();
+//
+//         //get the action-url of the form
+//         var actionurl = e.currentTarget.action;
+//
+//         //do your own request an handle the results
+//         $.ajax({
+//             url: actionurl,
+//             type: 'post',
+//             dataType: 'application/json',
+//             data: $("#myform").serialize(),
+//             success: function(data) {
+//             ... do something with the data...
+//             }
+//         });
+//
+//     });
+//
+// });
