@@ -11,7 +11,7 @@ let firebaseConfig = {
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-firebase.analytics();
+// firebase.analytics();
 
 // Reference messages collection
 let messagesRef = firebase.database().ref('messages');
@@ -85,6 +85,7 @@ $(function () {
         // Get Values
         let name = getInputVal("name");
         let email = getInputVal("email");
+
         // let file = getInputVal("file");
         let message = getInputVal("message");
 
@@ -95,14 +96,11 @@ $(function () {
             //trigger form input reset
             $("form").trigger("reset");
             //show success notification
-            // $(".text__success").fadeIn().style.display = "block";
             document.querySelector('.text__success').style.display = 'block';
             //Hide notification after 3 seconds
             setTimeout(() => {
-                // $(".text__success").fadeOut("slow").style.display = "none";
                 document.querySelector('.text__success').style.display = 'none';
-            }, 3000)
-            console.log(name, email, message);
+            }, 3000);
         });
     });
 });
